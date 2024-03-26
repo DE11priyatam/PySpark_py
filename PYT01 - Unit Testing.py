@@ -52,11 +52,9 @@ df_join = df_ol\
 display(df_join)
 
 
-
 df_ut = df_join.limit(50)
 
 display(df_ut)
-
 
 
 
@@ -69,7 +67,6 @@ def state_total_sales(df):
 
 
 
-
 df_avg_profit = state_avg_profit(df_ut)
 display(df_avg_profit)
 
@@ -78,10 +75,8 @@ display(df_total_sales)
 
 
 
-
-
-avg_sale_guj = float(df_avg_profit.where(col("State")=="Gujarat" ).collect()[0]["avg(Profit)"])
-total_sale_guj = float(df_total_sales.where(col("State")=="Gujarat" ).collect()[0]["sum(Amount)"])
+avg_sale_guj = float(df_avg_profit.where(col("State")=="Arizona" ).collect()[0]["avg(Profit)"])
+total_sale_guj = float(df_total_sales.where(col("State")=="Arizona" ).collect()[0]["sum(Amount)"])
 
 
 
